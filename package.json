@@ -1,0 +1,34 @@
+{
+  "name": "eoffice-uisi-k3",
+  "version": "1.0.0",
+  "description": "E-Office UISI K3 backend",
+  "scripts": {
+    "test": "node --env-file=.env --test --test-concurrency=1 test/",
+    "start": "node --env-file=.env src/server.js",
+    "dev": "node --env-file=.env --watch src/server.js",
+    "db:migrate": "node --env-file=.env scripts/migrate.js",
+    "db:fresh": "node --env-file=.env scripts/migrate.js --fresh && node --env-file=.env scripts/seed.js",
+    "db:seed": "node --env-file=.env scripts/seed.js",
+    "erd": "node --env-file=.env scripts/erd.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItsAutumnSai/eoffice-uisi-k3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ItsAutumnSai/eoffice-uisi-k3/issues"
+  },
+  "homepage": "https://github.com/ItsAutumnSai/eoffice-uisi-k3#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.24.6"
+  },
+  "devDependencies": {
+    "@viz-js/viz": "^3.31.0"
+  }
+}
